@@ -1,1 +1,203 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>My First Webpage</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            text-align: center;
+            margin: 0;
+            background: #f0f0f0;
+        }
+
+        h1 {
+            border: 10px solid navy;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            border: 8px solid black;
+        }
+
+        .hover-text {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .image-container:hover .hover-text {
+            display: block;
+        }
+
+        li:hover {
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #040c36;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #800020;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: black;
+            padding: 20px;
+            color: white;
+        }
+
+        /* PROJECT GRID FIX */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-block {
+            position: relative;
+            border: 6px solid #333;
+            padding: 20px;
+            background-color: white;
+            transition: background-color 0.3s, transform 0.2s;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .project-block:hover {
+            background-color: #f9f9f9;
+            transform: scale(1.05);
+        }
+
+        .project-block a {
+            color: #070f38;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .project-block img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Portfolio Website - Ingrid M</h1>
+
+        <div class="image-container">
+            <img src="https://imagescdn.homes.com/i2/PD5oVJNn1jc4Y7Jmdq3USbxPHUJ-ix59-icsorfOCVQ/117/mt-eden-high-school-hayward-ca-primaryphoto.jpg" alt="School Image">
+            <div class="hover-text">
+                This is Mt. Eden High School. Sometimes fun, sometimes chaos. Friends make it better!
+            </div>
+        </div>
+
+        <h2>Topics Covered</h2>
+        <ul>
+            <li><a href="https://isocpp.org/">C++</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+            <li><a href="https://www.nnlm.gov/guides/data-glossary/variable">Variables</a></li>
+            <li><a href="https://www.geeksforgeeks.org/what-is-array/#">Arrays</a></li>
+            <li><a href="https://www.geeksforgeeks.org/loops-programming/">Loops</a></li>
+            <li><a href="https://www.geeksforgeeks.org/conditional-statements-in-programming/">Conditional Statements</a></li>     
+        </ul>
+
+        <h2>AP Computer Science Projects</h2>
+        <div class="project-grid">
+            <div class="project-block">
+                <a href="https://codepen.io/Ingrid-Molina-Arellano/pen/OPJzEZo" target="_blank">Calculator App</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/1237/1237946.png" alt="Calculator">
+            </div>
+            <div class="project-block">
+                <a href="https://codepen.io/Ingrid-Molina-Arellano/pen/qEBmWzE" target="_blank">Countdown Project</a>
+                <img src="" alt="Countdown">
+            </div>
+            <div class="project-block">
+                <a href="https://codepen.io/Ingrid-Molina-Arellano/pen/XJWZgBa" target="_blank">Fortune Cookie</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/3565/3565418.png" alt="Fortune Cookie">
+            </div>
+            <div class="project-block">
+                <a href="https://codepen.io/Ingrid-Molina-Arellano/pen/ZYEeEPO" target="_blank">BlackJack Game</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/2222/2222417.png" alt="Blackjack">
+            </div>
+            <div class="project-block">
+                <a href="https://codepen.io/Ingrid-Molina-Arellano/pen/bNGwZzE?editors=1000" target="_blank">Password Generator</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/2913/2913465.png" alt="Password Generator">
+            </div>
+            <div class="project-block">
+                <a href="https://scratch.mit.edu/projects/1163395540/editor" target="_blank">Pop the Balloon</a>
+                <img src="" alt="Balloon Game">
+            </div>
+        </div>
+
+        <h2>About Me</h2>
+        <p>Hi, My name is Ingrid Molina Arellano, and I am 17 years old. My schedule is pretty tough and tight. My 0th period is U.S History, My 1st period is AP Computer Science, My 2nd period is AP Psychology, My 3rd period is AP English Language and Compostion, My 4th period is Art, My 5th period is Algebra 2, and Lastly My 6th period is Physics. From the beginning of my junior year I was excited for what was to come. The thing is I've endured hardships and the amount of homework this year, I believed that I overcame junior year. Sadly, from my preference I believed that Junior year was the hardest one. I am mostly nervous though that I am becoming a senior and I have to fill in big shoes. I don't think being the middle child is the easiest. I believe that there is a lot im going to have to succumb.</p>
+
+        <h3>Fun Facts</h3>
+        <ol>
+            <li>I have 2 siblings.</li>
+            <li>I used to have a dog.</li>
+            <li>I love math with a passion.</li>
+            <li>I love Grey's Anatomy.</li>
+            <li>I enjoy sushi.</li>
+        </ol>
+
+        <h3>Informational Facts (School)</h3>
+        <ul>
+            <li>I hate school with a passion. I have one year left, and I am ready to graduate. School year has already ended.</li>
+            <li>Favorite teachers: Mr. Guerrero, Mr. Akrabawi, Mr. Tomei, and Mr. Maharaj.</li>
+            <li>The Marías are so underrated. I’m going to their concert in July</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio Webpage</p>
+    </footer>
+</body>
+</html>
