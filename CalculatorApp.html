@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<!--Eduardo Salguero & Ingrid Molina -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator - By Code Traversal</title>
+</head>
+<body>
+
+    <!-- User Input Section -->
+    <div class="name-input">
+        <h2>Welcome! Please enter your name:</h2>
+        <input type="text" id="userName" placeholder="Enter your name">
+        <button onclick="startCalculator()">Start</button>
+    </div>
+
+    <!-- Calculator (Hidden Initially) -->
+    <div class="calculator" id="calculator" style="display: none;">
+        <h2 id="welcomeMessage"></h2>
+        <input type="text" placeholder="0" id="inputBox">
+        <div>
+            <button class="operator">AC</button>
+            <button class="operator">DEL</button>
+            <button class="operator">%</button>
+            <button class="operator">/</button>
+        </div>
+        <div>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">*</button>
+        </div>
+        <div>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">-</button>
+        </div>
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+        </div>
+        <div>
+            <button>00</button>
+            <button>0</button>
+            <button>.</button>
+            <button class="equalBtn">=</button>
+        </div>
+    </div>
+
+    <script>
+        function startCalculator() {
+            let name = document.getElementById("userName").value;
+            if (name.trim() !== "") {
+           document.querySelector(".name-input").style.display = "none";
+                document.getElementById("calculator").style.display = "block";
+                document.getElementById("welcomeMessage").innerText = `Hello, ${name}!`;
+            } else {
+                alert("Please enter your name to start.");
+            }
+        }
+    </script>
+
+</body>
+</html>
